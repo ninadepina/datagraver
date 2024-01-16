@@ -1,0 +1,411 @@
+[
+    {
+        "Start_year": 1963,
+        "End_year": 1966,
+        "Left": 51,
+        "Right": 99,
+        "Parties": {
+            "KVP": 50,
+            "PvdA": 43,
+            "VVD": 16,
+            "ARP": 13,
+            "CHU": 13,
+            "PSP": 4,
+            "CPN": 4,
+            "SGP": 3,
+            "BP": 3,
+            "GPV": 1
+        },
+        "Attendance": 95.13
+    },
+    {
+        "Start_year": 1967,
+        "End_year": 1970,
+        "Left": 53,
+        "Right": 97,
+        "Parties": {
+            "KVP": 42,
+            "PvdA": 37,
+            "VVD": 17,
+            "ARP": 15,
+            "CHU": 12,
+            "BP": 7,
+            "D66": 7,
+            "CPN": 5,
+            "PSP": 4,
+            "SGP": 2,
+            "GPV": 1
+        },
+        "Attendance": 94.95
+    },
+    {
+        "Start_year": 1971,
+        "End_year": 1971,
+        "Left": 60,
+        "Right": 90,
+        "Parties": {
+            "PvdA": 39,
+            "KVP": 35,
+            "VVD": 16,
+            "ARP": 13,
+            "D66": 11,
+            "CHU": 10,
+            "DS'70": 8,
+            "CPN": 6,
+            "SGP": 3,
+            "PPR": 2,
+            "GPV": 2,
+            "NMP": 2,
+            "PSP": 2,
+            "BP": 1
+        },
+        "Attendance": 79.12
+    },
+    {
+        "Start_year": 1972,
+        "End_year": 1976,
+        "Left": 65,
+        "Right": 85,
+        "Parties": {
+            "PvdA": 43,
+            "KVP": 27,
+            "VVD": 22,
+            "ARP": 14,
+            "PPR": 7,
+            "CHU": 7,
+            "CPN": 7,
+            "D66": 6,
+            "DS'70": 6,
+            "SGP": 3,
+            "BP": 3,
+            "GPV": 2,
+            "PSP": 2,
+            "RKPN": 1
+        },
+        "Attendance": 83.5
+    },
+    {
+        "Start_year": 1977,
+        "End_year": 1980,
+        "Left": 67,
+        "Right": 83,
+        "Parties": {
+            "PvdA": 53,
+            "CDA": 49,
+            "VVD": 28,
+            "D66": 8,
+            "SGP": 3,
+            "PPR": 3,
+            "CPN": 2,
+            "GPV": 1,
+            "PSP": 1,
+            "BP": 1,
+            "DS'70": 1
+        },
+        "Attendance": 88
+    },
+    {
+        "Start_year": 1981,
+        "End_year": 1981,
+        "Left": 70,
+        "Right": 80,
+        "Parties": {
+            "CDA": 46,
+            "PvdA": 44,
+            "VVD": 26,
+            "D66": 17,
+            "PSP": 3,
+            "CPN": 3,
+            "SGP": 3,
+            "PPR": 2,
+            "RPF": 2,
+            "GPV": 1
+        },
+        "Attendance": 87.03
+    },
+    {
+        "Start_year": 1982,
+        "End_year": 1985,
+        "Left": 62,
+        "Right": 88,
+        "Parties": {
+            "PvdA": 47,
+            "CDA": 45,
+            "VVD": 36,
+            "D66": 6,
+            "PSP": 3,
+            "SGP": 3,
+            "CPN": 3,
+            "PPR": 2,
+            "RPF": 2,
+            "CP": 1,
+            "GPV": 1,
+            "EVP": 1
+        },
+        "Attendance": 80.98
+    },
+    {
+        "Start_year": 1986,
+        "End_year": 1988,
+        "Left": 64,
+        "Right": 86,
+        "Parties_left": {
+            "PvdA": 52,
+            "D66": 9,
+            "PPR": 2,
+            "PSP": 1
+        },
+        "Parties_right": {
+            "CDA": 54,
+            "VVD": 27,
+            "SGP": 3,
+            "GPV": 1,
+            "RPF": 1
+        },
+        "Attendance": 85.76
+    },
+    {
+        "Start_year": 1989,
+        "End_year": 1993,
+        "Left": 67,
+        "Right": 83,
+        "Parties_left": {
+            "PvdA": 49,
+            "D66": 12,
+            "GL": 6
+        },
+        "Parties_right": {
+            "CDA": 54,
+            "VVD": 22,
+            "SGP": 3,
+            "GPV": 2,
+            "RPF": 2,
+            "CD": 1
+        },
+        "Attendance": 80.27
+    },
+    {
+        "Start_year": 1994,
+        "End_year": 1997,
+        "Left": 68,
+        "Right": 82,
+        "Parties_left": {
+            "PvdA": 37,
+            "D66": 24,
+            "GL": 5,
+            "SP": 2
+        },
+        "Parties_right": {
+            "CDA": 34,
+            "VVD": 31,
+            "AOV": 6,
+            "CD": 3,
+            "RPF": 3,
+            "SGP": 2,
+            "GPV": 2,
+            "UNIE 55+": 1
+        },
+        "Attendance": 78.8
+    },
+    {
+        "Start_year": 1998,
+        "End_year": 2001,
+        "Left": 75,
+        "Right": 75,
+        "Parties_left": {
+            "PvdA": 45,
+            "D66": 14,
+            "GL": 11,
+            "SP": 5
+        },
+        "Parties_right": {
+            "VVD": 38,
+            "CDA": 29,
+            "RPF": 3,
+            "SGP": 3,
+            "GPV": 2
+        },
+        "Attendance": 73.4
+    },
+    {
+        "Start_year": 2002,
+        "End_year": 2002,
+        "Left": 49,
+        "Right": 101,
+        "Parties_left": {
+            "PvdA": 23,
+            "GL": 10,
+            "SP": 9,
+            "D66": 7
+        },
+        "Parties_right": {
+            "CDA": 43,
+            "LPF": 26,
+            "VVD": 24,
+            "CU": 4,
+            "Leefbaar": 2,
+            "SGP": 2
+        },
+        "Attendance": 79.06
+    },
+    {
+        "Start_year": 2003,
+        "End_year": 2005,
+        "Left": 65,
+        "Right": 85,
+        "Parties_left": {
+            "PvdA": 42,
+            "SP": 9,
+            "GL": 8,
+            "D66": 6
+        },
+        "Parties_right": {
+            "CDA": 44,
+            "VVD": 28,
+            "LPF": 8,
+            "CU": 3,
+            "SGP": 2
+        },
+        "Attendance": 80
+    },
+    {
+        "Start_year": 2006,
+        "End_year": 2009,
+        "Left": 68,
+        "Right": 82,
+        "Parties_left": {
+            "PvdA": 33,
+            "SP": 25,
+            "GL": 7,
+            "D66": 3,
+            "PvdD": 2
+        },
+        "Parties_right": {
+            "CDA": 41,
+            "VVD": 22,
+            "PVV": 9,
+            "CU": 6,
+            "SGP": 2
+        },
+        "Attendance": 80.35
+    },
+    {
+        "Start_year": 2010,
+        "End_year": 2011,
+        "Left": 67,
+        "Right": 83,
+        "Parties_left": {
+            "PvdA": 30,
+            "SP": 15,
+            "GL": 10,
+            "D66": 10,
+            "PvdD": 2
+        },
+        "Parties_right": {
+            "VVD": 31,
+            "PVV": 24,
+            "CDA": 21,
+            "CU": 5,
+            "SGP": 2
+        },
+        "Attendance": 75.4
+    },
+    {
+        "Start_year": 2012,
+        "End_year": 2016,
+        "Left": 71,
+        "Right": 79,
+        "Parties_left": {
+            "PvdA": 38,
+            "SP": 15,
+            "D66": 12,
+            "GL": 4,
+            "PvdD": 2
+        },
+        "Parties_right": {
+            "VVD": 41,
+            "PVV": 15,
+            "CDA": 13,
+            "CU": 5,
+            "SGP": 3,
+            "50PLUS": 2
+        },
+        "Attendance": 74.57
+    },
+    {
+        "Start_year": 2017,
+        "End_year": 2020,
+        "Left": 64,
+        "Right": 86,
+        "Parties_left": {
+            "D66": 19,
+            "GL": 14,
+            "SP": 14,
+            "PvdA": 9,
+            "PvdD": 5,
+            "DENK": 3
+        },
+        "Parties_right": {
+            "VVD": 33,
+            "PVV": 20,
+            "CDA": 19,
+            "CU": 5,
+            "50PLUS": 4,
+            "SGP": 3,
+            "FVD": 2
+        },
+        "Attendance": 81.57
+    },
+    {
+        "Start_year": 2021,
+        "End_year": 2022,
+        "Left": 63,
+        "Right": 87,
+        "Parties_left": {
+            "D66": 24,
+            "PvdA": 9,
+            "SP": 9,
+            "GL": 8,
+            "PvdD": 6,
+            "Volt": 3,
+            "DENK": 3,
+            "BIJ1": 1
+        },
+        "Parties_right": {
+            "VVD": 34,
+            "PVV": 17,
+            "CDA": 15,
+            "FVD": 8,
+            "CU": 5,
+            "SGP": 3,
+            "JA21": 3,
+            "50PLUS": 1,
+            "BBB": 1
+        },
+        "Attendance": 78.71
+    },
+    {
+        "Start_year": 2023,
+        "End_year": 2024,
+        "Left": 46,
+        "Right": 104,
+        "Parties": {
+            "PVV": 37,
+            "GL-PvdA": 25,
+            "VVD": 24,
+            "NSC": 20,
+            "BBB": 7,
+            "D66": 9,
+            "CDA": 5,
+            "SP": 5,
+            "PvdD": 3,
+            "DENK": 3,
+            "CU": 3,
+            "FvD": 3,
+            "SGP": 3,
+            "Volt": 2,
+            "JA21": 1
+        },
+        "Attendance": 77.75
+    }
+]
