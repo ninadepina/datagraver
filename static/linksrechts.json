@@ -1,17 +1,350 @@
 [
     {
+        "Start_year": 1901,
+        "End_year": 1904,
+        "Left": 26,
+        "Right": 74,
+        "Parties_left": {
+            "VDB": 9,
+            "vrije Liberalen": 8,
+            "SDAP": 6,
+            "CH Kiezersbond": 1,
+            "vrije socialist": 1,
+            "onafhankelijk a.r.": 1
+        },
+        "Parties_right": {
+            "katholieken": 25,
+            "ARP": 23,
+            "LU": 18,
+            "VAR": 7,
+            "Friese Bond": 1
+        },
+        "Attendance": 65.09
+    },
+    {
+        "Start_year": 1905,
+        "End_year": 1908,
+        "Left": 27,
+        "Right": 73,
+        "Parties_left": {
+            "VDB": 11,
+            "vrije Liberalen": 10,
+            "SDAP": 6,
+            "vrije socialist": 1
+        },
+        "Parties_right": {
+            "AB": 25,
+            "LU": 24,
+            "ARP": 15,
+            "CHP": 7,
+            "Friese Bond": 1
+        },
+        "Attendance": 78.81
+    },
+    {
+        "Start_year": 1909,
+        "End_year": 1912,
+        "Left": 16,
+        "Right": 84,
+        "Parties_left": {
+            "VDB": 9,
+            "SDAP": 7
+        },
+        "Parties_right": {
+            "AB": 25,
+            "ARP": 23,
+            "LU": 20,
+            "CHU": 12,
+            "Bond van Vrije Liberalen": 4
+        },
+        "Attendance": 71.68
+    },
+    {
+        "Start_year": 1913,
+        "End_year": 1916,
+        "Left": 24,
+        "Right": 76,
+        "Parties_left": {
+            "SDAP": 16,
+            "VDB": 7,
+            "onafhankelijk c.h.": 1
+        },
+        "Parties_right": {
+            "AB": 25,
+            "LU": 21,
+            "ARP": 11,
+            "Bond van Vrije Liberalen": 10,
+            "CHU": 9
+        },
+        "Attendance": 81.24
+    },
+    {
+        "Start_year": 1917,
+        "End_year": 1917,
+        "Left": 24,
+        "Right": 76,
+        "Parties_left": {
+            "SDAP": 15,
+            "VDB": 8,
+            "onafhankelijk c.h.": 1
+        },
+        "Parties_right": {
+            "AB": 25,
+            "LU": 21,
+            "ARP": 11,
+            "Bond van Vrije Liberalen": 10,
+            "CHU": 9
+        },
+        "Attendance": 21.36
+    },
+    {
+        "Start_year": 1918,
+        "End_year": 1921,
+        "Left": 48,
+        "Right": 52,
+        "Parties_left": {
+            "SDAP": 22,
+            "LU": 6,
+            "VDB": 5,
+            "BVL": 4,
+            "EB": 3,
+            "SDP": 2,
+            "Middenstandspartij": 1,
+            "CDP": 1,
+            "SP": 1,
+            "BCS": 1,
+            "CSP": 1,
+            "Neutrale Partij": 1
+        },
+        "Parties_right": {
+            "AB": 30,
+            "ARP": 13,
+            "CHU": 7,
+            "Plattelandersbond": 1,
+            "VDW": 1
+        },
+        "Attendance": 88.43
+    },
+    {
+        "Start_year": 1922,
+        "End_year": 1924,
+        "Left": 28,
+        "Right": 72,
+        "Parties_left": {
+            "SDAP": 20,
+            "VDB": 5,
+            "CPH": 2,
+            "Liberale Partij": 1
+        },
+        "Parties_right": {
+            "RK": 32,
+            "ARP": 16,
+            "CHU": 11,
+            "Vrijheidsbond": 10,
+            "Plattelandersbond": 2,
+            "SGP": 1
+        },
+        "Attendance": 91.45
+    },
+    {
+        "Start_year": 1925,
+        "End_year": 1928,
+        "Left": 33,
+        "Right": 67,
+        "Parties_left": {
+            "SDAP": 24,
+            "VDB": 7,
+            "CPH": 1,
+            "RKVP": 1
+        },
+        "Parties_right": {
+            "RKSP": 30,
+            "ARP": 13,
+            "CHU": 11,
+            "Vrijheidsbond": 9,
+            "SGP": 2,
+            "HGSP": 1,
+            "Plattelandersbond": 1
+        },
+        "Attendance": 86.77
+    },
+    {
+        "Start_year": 1929,
+        "End_year": 1932,
+        "Left": 33,
+        "Right": 67,
+        "Parties_left": {
+            "SDAP": 24,
+            "VDB": 7,
+            "CPH-De Visser": 1,
+            "CPH-Wijnkoop": 1
+        },
+        "Parties_right": {
+            "RKSP": 30,
+            "ARP": 12,
+            "CHU": 11,
+            "Vrijheidsbond": 8,
+            "SGP": 3,
+            "MP S&L": 1,
+            "HGSP": 1,
+            "Plattelandersbond": 1
+        },
+        "Attendance": 89.61
+    },
+    {
+        "Start_year": 1933,
+        "End_year": 1936,
+        "Left": 35,
+        "Right": 65,
+        "Parties_left": {
+            "SDAP": 22,
+            "VDB": 6,
+            "CPH": 4,
+            "RSP": 1,
+            "RKVP": 1,
+            "CDU": 1
+        },
+        "Parties_right": {
+            "RKSP": 28,
+            "ARP": 14,
+            "CHU": 10,
+            "Vrijheidsbond": 7,
+            "SGP": 3,
+            "NBTM": 1,
+            "HGSP": 1,
+            "VNH": 1
+        },
+        "Attendance": 94.22
+    },
+    {
+        "Start_year": 1937,
+        "End_year": 1945,
+        "Left": 34,
+        "Right": 66,
+        "Parties_left": {
+            "SDAP": 23,
+            "VDB": 6,
+            "CPN": 3,
+            "CDU": 2
+        },
+        "Parties_right": {
+            "RKSP": 31,
+            "ARP": 17,
+            "CHU": 8,
+            "NSB": 4,
+            "LSP": 4,
+            "SGP": 2
+        },
+        "Attendance": 94.4
+    },
+    {
+        "Start_year": 1946,
+        "End_year": 1947,
+        "Left": 39,
+        "Right": 61,
+        "Parties_left": {
+            "PvdA": 29,
+            "CPN": 10
+        },
+        "Parties_right": {
+            "KVP": 32,
+            "ARP": 13,
+            "CHU": 8,
+            "PvdV": 6,
+            "SGP": 2
+        },
+        "Attendance": 93.1
+    },
+    {
+        "Start_year": 1948,
+        "End_year": 1951,
+        "Left": 35,
+        "Right": 65,
+        "Parties_left": {
+            "PvdA": 27,
+            "CPN": 8
+        },
+        "Parties_right": {
+            "KVP": 32,
+            "ARP": 13,
+            "CHU": 9,
+            "VVD": 8,
+            "SGP": 2,
+            "Lijst Welter": 1
+        },
+        "Attendance": 93.67
+    },
+    {
+        "Start_year": 1952,
+        "End_year": 1955,
+        "Left": 36,
+        "Right": 64,
+        "Parties_left": {
+            "PvdA": 30,
+            "CPN": 6
+        },
+        "Parties_right": {
+            "KVP": 30,
+            "ARP": 12,
+            "VVD": 9,
+            "CHU": 9,
+            "KNP": 2,
+            "SGP": 2
+        },
+        "Attendance": 94.98
+    },
+    {
+        "Start_year": 1956,
+        "End_year": 1958,
+        "Left": 57,
+        "Right": 93,
+        "Parties_left": {
+            "PvdA": 50,
+            "CPN": 7
+        },
+        "Parties_right": {
+            "KVP": 49,
+            "ARP": 15,
+            "VVD": 13,
+            "CHU": 13,
+            "SGP": 3
+        },
+        "Attendance": 95.5
+    },
+    {
+        "Start_year": 1959,
+        "End_year": 1962,
+        "Left": 53,
+        "Right": 97,
+        "Parties_left": {
+            "PvdA": 48,
+            "CPN": 3,
+            "PSP": 2
+        },
+        "Parties_right": {
+            "KVP": 49,
+            "VVD": 19,
+            "ARP": 14,
+            "CHU": 12,
+            "SGP": 3
+        },
+        "Attendance": 95.57
+    },
+    {
         "Start_year": 1963,
         "End_year": 1966,
         "Left": 51,
         "Right": 99,
-        "Parties": {
-            "KVP": 50,
+        "Parties_left": {
             "PvdA": 43,
+            "PSP": 4,
+            "CPN": 4
+        },
+        "Parties_right": {
+            "KVP": 50,
             "VVD": 16,
             "ARP": 13,
             "CHU": 13,
-            "PSP": 4,
-            "CPN": 4,
             "SGP": 3,
             "BP": 3,
             "GPV": 1
@@ -89,18 +422,20 @@
         "End_year": 1980,
         "Left": 67,
         "Right": 83,
-        "Parties": {
+        "Parties_left": {
             "PvdA": 53,
-            "CDA": 49,
-            "VVD": 28,
             "D66": 8,
-            "SGP": 3,
             "PPR": 3,
             "CPN": 2,
+            "DS'70": 1
+        },
+        "Parties_right": {
+            "CDA": 49,
+            "VVD": 28,
+            "SGP": 3,
             "GPV": 1,
             "PSP": 1,
-            "BP": 1,
-            "DS'70": 1
+            "BP": 1  
         },
         "Attendance": 88
     },
@@ -128,19 +463,21 @@
         "End_year": 1985,
         "Left": 62,
         "Right": 88,
-        "Parties": {
+        "Parties_left": {
             "PvdA": 47,
-            "CDA": 45,
-            "VVD": 36,
             "D66": 6,
             "PSP": 3,
-            "SGP": 3,
             "CPN": 3,
             "PPR": 2,
-            "RPF": 2,
-            "CP": 1,
-            "GPV": 1,
             "EVP": 1
+        },
+        "Parties_right": {
+            "CDA": 45,
+            "VVD": 36,
+            "SGP": 3,
+            "RPF": 2,
+            "GPV": 1,
+            "CP": 1
         },
         "Attendance": 80.98
     },
@@ -271,8 +608,8 @@
     {
         "Start_year": 2006,
         "End_year": 2009,
-        "Left": 68,
-        "Right": 82,
+        "Left": 70,
+        "Right": 80,
         "Parties_left": {
             "PvdA": 33,
             "SP": 25,
