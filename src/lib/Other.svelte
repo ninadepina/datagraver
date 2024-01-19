@@ -18,7 +18,7 @@
 
     const drawStackedBarCharts = () => {
         const margin = { top: 20, right: 30, bottom: 30, left: 40 };
-        const width = 1200 - margin.left - margin.right;
+        const width = 2400 - margin.left - margin.right;
         const height = 400 - margin.top - margin.bottom;
 
         const svg = d3
@@ -29,7 +29,22 @@
             .append('g')
             .attr('transform', `translate(${margin.left},${margin.top})`);
 
-        const years = data.map((d) => d.Start_year);
+        const years = Array.from(
+            new Set(
+                data.flatMap((d) => {
+                    const startYear = d.Start_year;
+                    const endYear = d.End_year;
+
+                    const yearsInRange = Array.from(
+                        { length: endYear - startYear + 1 },
+                        (_, i) => startYear + i
+                    );
+
+                    return [startYear, ...yearsInRange, endYear];
+                })
+            )
+        );
+
         const parties = Array.from(
             new Set(
                 data.reduce(
@@ -45,7 +60,7 @@
 
         const totalSeatsByYear = years.map((year) =>
             data
-                .filter((d) => d.Start_year === year)
+                .filter((d) => d.Start_year <= year && d.End_year >= year)
                 .reduce((total, d) => total + d.Left + d.Right, 0)
         );
 
@@ -65,34 +80,34 @@
             .domain(parties)
             .range(d3.schemeSet3);
 
-        const stackedBars = svg
-            .selectAll('.stacked-bar-group')
-            .data(data)
-            .enter()
-            .append('g')
-            .attr('class', 'stacked-bar-group')
-            .attr('transform', (d) => `translate(${xScale(d.Start_year)}, 0)`);
+        years.forEach((year) => {
+            const stackedBars = svg
+                .selectAll(`.stacked-bar-group-${year}`)
+                .data(data.filter((d) => d.Start_year <= year && d.End_year >= year))
+                .enter()
+                .append('g')
+                .attr('class', `stacked-bar-group-${year}`)
+                .attr('transform', (d) => `translate(${xScale(year)}, 0)`);
 
-        stackedBars
-            .selectAll('rect')
-            .data((d) => {
-                let cumulativePercentage = 0;
-                return [...d.Parties_left, ...d.Parties_right].map((party) => {
-                    const percentage =
-                        (party.Seats /
-                            totalSeatsByYear[years.indexOf(d.Start_year)]) *
-                        100;
-                    cumulativePercentage += percentage;
-                    return { ...party, percentage, cumulativePercentage };
-                });
-            })
-            .enter()
-            .append('rect')
-            .attr('x', (d) => xScale.bandwidth() / 2 - 10)
-            .attr('y', (d) => yScale(d.cumulativePercentage))
-            .attr('height', (d) => height - yScale(d.percentage))
-            .attr('width', 20)
-            .attr('fill', (d) => colorScale(d.Party));
+            stackedBars
+                .selectAll('rect')
+                .data((d) => {
+                    let cumulativePercentage = 0;
+                    return [...d.Parties_left, ...d.Parties_right].map((party) => {
+                        const percentage =
+                            (party.Seats / totalSeatsByYear[years.indexOf(year)]) * 100;
+                        cumulativePercentage += percentage;
+                        return { ...party, percentage, cumulativePercentage };
+                    });
+                })
+                .enter()
+                .append('rect')
+                .attr('x', (d) => xScale.bandwidth() / 2 - 10)
+                .attr('y', (d) => yScale(d.cumulativePercentage))
+                .attr('height', (d) => height - yScale(d.percentage))
+                .attr('width', 20)
+                .attr('fill', (d) => colorScale(d.Party));
+        });
 
         const xAxis = d3.axisBottom(xScale);
         svg.append('g').attr('transform', `translate(0,${height})`).call(xAxis);
