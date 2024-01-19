@@ -16,8 +16,7 @@
         }
     });
 
-    function drawStackedBarCharts() {
-        // Set up the SVG container
+    const drawStackedBarCharts = () => {
         const margin = { top: 20, right: 30, bottom: 30, left: 40 };
         const width = 1200 - margin.left - margin.right;
         const height = 400 - margin.top - margin.bottom;
@@ -30,7 +29,6 @@
             .append('g')
             .attr('transform', `translate(${margin.left},${margin.top})`);
 
-        // Extract years and parties from the data
         const years = data.map((d) => d.Start_year);
         const parties = Array.from(
             new Set(
@@ -45,7 +43,6 @@
             )
         );
 
-        // Set up scales
         const xScale = d3
             .scaleBand()
             .domain(years)
@@ -57,13 +54,11 @@
             .domain([0, d3.max(data, (d) => d.Left + d.Right)])
             .range([height, 0]);
 
-        // Set up colors
         const colorScale = d3
             .scaleOrdinal()
             .domain(parties)
             .range(d3.schemeSet3);
 
-        // Draw bars
         const stackedBars = svg
             .selectAll('.stacked-bar-group')
             .data(data)
@@ -75,7 +70,6 @@
         stackedBars
             .selectAll('rect')
             .data((d) => {
-                // Calculate the cumulative sum of seats for each party
                 let cumulativeSeats = 0;
                 return [...d.Parties_left, ...d.Parties_right].map((party) => {
                     cumulativeSeats += party.Seats;
@@ -90,7 +84,6 @@
             .attr('width', 20)
             .attr('fill', (d) => colorScale(d.Party));
 
-        // Draw axes
         const xAxis = d3.axisBottom(xScale);
         svg.append('g').attr('transform', `translate(0,${height})`).call(xAxis);
 
