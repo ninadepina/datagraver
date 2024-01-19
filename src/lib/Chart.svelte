@@ -3,6 +3,7 @@
     import * as d3 from 'd3';
 
     let data;
+    let tooltip;
 
     onMount(async () => {
         try {
@@ -20,6 +21,7 @@
         const margin = { top: 20, right: 30, bottom: 30, left: 30 };
         const width = 500 - margin.left - margin.right;
         const height = 1600 - margin.top - margin.bottom;
+        const tooltipSelection = d3.select(tooltip);
 
         const svg = d3
             .select('#chart')
@@ -146,7 +148,7 @@
                 let cumulativeSeats = 0;
                 const partiesLeft = d.Parties_left.map((party) => {
                     cumulativeSeats += party.Seats;
-                    console.log('Left Bar - Year:', d.year, 'Party:', party.Party, 'Seats:', party.Seats);
+                    // console.log('Left Bar - Year:', d.year, 'Party:', party.Party, 'Seats:', party.Seats);
                     return { ...party, cumulativeSeats };
                 });
 
@@ -169,7 +171,7 @@
                 let cumulativeSeats = 0;
                 const partiesRight = d.Parties_right.map((party) => {
                     cumulativeSeats += party.Seats;
-                    console.log('Right Bar - Year:', d.year, 'Party:', party.Party, 'Seats:', party.Seats);
+                    // console.log('Right Bar - Year:', d.year, 'Party:', party.Party, 'Seats:', party.Seats);
                     return { ...party, cumulativeSeats };
                 });
 
@@ -238,7 +240,41 @@
             .attr('x', 0)
             .attr('dy', yScale.bandwidth() / 2 + 7)
             .style('text-anchor', 'middle');
+
+        // tooltip
+        const bars = svg.selectAll('.barLeft, .barRight');
+
+        bars.on('mouseover', (event, d) => {
+            const xPos = event.pageX;
+            const yPos = event.pageY;
+
+            tooltipSelection
+                .style('opacity', 1)
+                .html(
+                    `
+                    Parties Left: ${JSON.stringify(d.Parties_left)}<br>
+                    Parties Right: ${JSON.stringify(d.Parties_right)}
+                `
+                )
+                .style('left', `${xPos}px`)
+                .style('top', `${yPos}px`);
+        }).on('mouseout', () => {
+            tooltipSelection.style('opacity', 0);
+        });
     };
 </script>
 
 <div id="chart" />
+<div id="tooltip" bind:this={tooltip} class="tooltip" />
+
+<style>
+    .tooltip {
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 999;
+    }
+</style>
