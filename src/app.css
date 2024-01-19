@@ -10,4 +10,21 @@
 }
 
 :root {
+    --font-family: 'Marcellus', serif;
+    --font-family-h2: 'Inter', sans-serif;
+}
+
+h1 {
+    font-family: var(--font-family);
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2 {
+    max-width: 47rem;
+    margin: 0 auto;
+    font-family: var(--font-family-h2);
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
 }

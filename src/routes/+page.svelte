@@ -1,5 +1,10 @@
 <script>
-    import Map from '$lib/Map.svelte';
+    import Barchart from '$lib/Barchart.svelte';
+    import Chart from '$lib/Chart.svelte';
 </script>
 
-<Map />
+<h1>Tweede kamer door de jaren heen</h1>
+<h2>In hoeverre hebben historische gebeurtenissen in Nederland invloed gehad op het stemgedrag van de bevolking tijdens de Tweede Kamer verkiezingen door de jaren heen?</h2>
+<!-- <Barchart /> -->
+<Chart />
+
