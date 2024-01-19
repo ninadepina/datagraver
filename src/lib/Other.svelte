@@ -88,7 +88,7 @@
                 .append('g')
                 .attr('class', `stacked-bar-group-${year}`)
                 .attr('transform', (d) => `translate(${xScale(year)}, 0)`);
-
+            // prettier-ignore
             stackedBars
                 .selectAll('rect')
                 .data((d) => {
@@ -112,7 +112,7 @@
         const xAxis = d3.axisBottom(xScale);
         svg.append('g').attr('transform', `translate(0,${height})`).call(xAxis);
 
-        const yAxis = d3.axisLeft(yScale);
+        const yAxis = d3.axisLeft(yScale).tickFormat((d) => `${d}%`);
         svg.append('g').call(yAxis);
     };
 </script>
