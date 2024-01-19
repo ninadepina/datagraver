@@ -43,6 +43,12 @@
             )
         );
 
+        const totalSeatsByYear = years.map((year) =>
+            data
+                .filter((d) => d.Start_year === year)
+                .reduce((total, d) => total + d.Left + d.Right, 0)
+        );
+
         const xScale = d3
             .scaleBand()
             .domain(years)
@@ -51,7 +57,7 @@
 
         const yScale = d3
             .scaleLinear()
-            .domain([0, d3.max(data, (d) => d.Left + d.Right)])
+            .domain([0, 100])
             .range([height, 0]);
 
         const colorScale = d3
@@ -70,17 +76,21 @@
         stackedBars
             .selectAll('rect')
             .data((d) => {
-                let cumulativeSeats = 0;
+                let cumulativePercentage = 0;
                 return [...d.Parties_left, ...d.Parties_right].map((party) => {
-                    cumulativeSeats += party.Seats;
-                    return { ...party, cumulativeSeats };
+                    const percentage =
+                        (party.Seats /
+                            totalSeatsByYear[years.indexOf(d.Start_year)]) *
+                        100;
+                    cumulativePercentage += percentage;
+                    return { ...party, percentage, cumulativePercentage };
                 });
             })
             .enter()
             .append('rect')
             .attr('x', (d) => xScale.bandwidth() / 2 - 10)
-            .attr('y', (d) => yScale(d.cumulativeSeats))
-            .attr('height', (d) => height - yScale(d.Seats))
+            .attr('y', (d) => yScale(d.cumulativePercentage))
+            .attr('height', (d) => height - yScale(d.percentage))
             .attr('width', 20)
             .attr('fill', (d) => colorScale(d.Party));
 
@@ -89,7 +99,7 @@
 
         const yAxis = d3.axisLeft(yScale);
         svg.append('g').call(yAxis);
-    }
+    };
 </script>
 
 <div id="chart-container" />
