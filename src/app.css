@@ -28,3 +28,13 @@ h2 {
     font-weight: 400;
     text-align: center;
 }
+
+body { 
+    overflow-x: hidden;
+}
+
+#chart-container svg {
+    margin-top: 41.91rem;
+    margin-left: 1rem;
+    transform: rotate(90deg);
+}
