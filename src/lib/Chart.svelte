@@ -31,6 +31,91 @@
             .append('g')
             .attr('transform', `translate(${margin.left},${margin.top})`);
 
+        const colorScaleData = {
+            'GL-PvdA': 'brown',
+            D66: '#38A93E',
+            SP: '#E61B23',
+            PvdD: '#1F682B',
+            DENK: '#38B1AC',
+            Volt: '#5C278A',
+            BIJ1: '#F7F702',
+            GL: '#38AA32',
+            PvdA: '#DE0B2D',
+            PPR: '#2C429E',
+            PSP: '#F4212C',
+            CPN: 'orange',
+            EVP: '#7B2C63',
+            "DS'70": '#E60C20',
+            SDAP: '#CA2714',
+            VDB: '#B3B3B3',
+            CDU: 'navy',
+            CPH: 'maroon',
+            RSP: 'salmon',
+            RKVP: '#C63D1A',
+            'CPH-De Visser': 'lavender',
+            'CPH-Wijnkoop': 'plum',
+            'Liberale Partij': 'turquoise',
+            'Neutrale Partij': 'violet',
+            CSP: 'sienna',
+            BCS: 'slategray',
+            CDP: 'peru',
+            Middenstandspartij: 'darkgreen',
+            SDP: 'darkred',
+            EB: 'darkcyan',
+            BVL: 'darkslateblue',
+            'onafhankelijk c.h.': 'rosybrown',
+            'vrije socialist': 'lightcoral',
+            'vrije Liberalen': 'mediumorchid',
+            'CH Kiezersbond': 'darkorange',
+            'onafhankelijk a.r.': 'indianred',
+            PVV: '#184673',
+            FvD: '#A5191B',
+            VVD: '#F66303',
+            CDA: '#44C94B',
+            CU: '#30A5E8',
+            SGP: '#EA5D05',
+            NSC: '#131239',
+            BBB: '#97C218',
+            JA21: '#E01A14',
+            '50PLUS': '#932290',
+            LPF: '#F9D846',
+            Leefbaar: '#447937',
+            GPV: '#F77608',
+            RPF: '#8CE1B8',
+            'UNIE 55+': '#FCCE48',
+            CD: '#F44A29',
+            AOV: '#1C559F',
+            CP: '#F1EC88',
+            BP: 'maroon',
+            RKPN: '#DABD2D',
+            CHU: '#393B8B',
+            ARP: '#9B2B93',
+            KVP: '#FDE24C',
+            PSP: '#F42630',
+            NMP: '#E1CAA0',
+            KNP: 'darkslategray',
+            'Lijst Welter': 'firebrick',
+            PvdV: 'tomato',
+            LSP: 'gold',
+            NSB: 'darkred',
+            RKSP: 'sienna',
+            VNH: 'darkkhaki',
+            HGSP: 'mediumvioletred',
+            NBTM: 'darkcyan',
+            Vrijheidsbond: 'darkgreen',
+            Plattelandersbond: 'olivedrab',
+            'MP S&L': 'lightseagreen',
+            RK: 'saddlebrown',
+            VDW: 'darkviolet',
+            LU: 'peru',
+            AB: 'darkslategray',
+            'Bond van Vrije Liberalen': 'gold',
+            'Friese Bond': 'mediumspringgreen',
+            CHP: 'indianred',
+            VAR: 'lightslategray',
+            katholieken: 'darkorange'
+        };
+
         // years
         const allYears = Array.from(
             new Set(
@@ -225,15 +310,24 @@
                 return isInPeriod || d.year === year ? 0 : 1;
             });
 
+            // bars.style('cursor', currentRange ? 'pointer' : 'default');
+
             if (currentRange) {
                 const xPos = e.pageX;
-                const yPos = e.pageY;
+                const yPos = e.pageY - 60;
 
                 const partiesLeftList = currentRange.Parties_left.map(
-                    ({ Party, Seats }) => `${Party}: ${Seats}`
+                    ({ Party, Seats }) =>
+                        `<span style="--color: ${
+                            colorScaleData[Party] || 'red'
+                        };" class="party-item">${Party}: ${Seats}</span>`
                 ).join('<br>');
+
                 const partiesRightList = currentRange.Parties_right.map(
-                    ({ Party, Seats }) => `${Party}: ${Seats}`
+                    ({ Party, Seats }) =>
+                        `<span style="--color: ${
+                            colorScaleData[Party] || 'red'
+                        };" class="party-item">${Party}: ${Seats}</span>`
                 ).join('<br>');
 
                 tooltipSelection
@@ -241,10 +335,10 @@
                     .html(
                         `
                             <div class="party-list">
-                                <strong>Links:</strong><br>${partiesLeftList}
+                                <strong>Links (${currentRange.Left}):</strong><br>${partiesLeftList}
                             </div>
                             <div class="party-list">
-                                <strong>Rechts:</strong><br>${partiesRightList}
+                                <strong>Rechts (${currentRange.Right}):</strong><br>${partiesRightList}
                             </div>
                         `
                     )
@@ -278,7 +372,6 @@
         pointer-events: none;
         z-index: 999;
         display: flex;
-        flex-direction: row;
         gap: 20px;
     }
 </style>
