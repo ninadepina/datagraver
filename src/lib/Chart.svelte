@@ -206,6 +206,27 @@
             .attr('x', 0)
             .attr('dy', yScale.bandwidth() / 2 + 7)
             .style('text-anchor', 'middle');
+
+        // hover effect
+        const bars = svg.selectAll('.barLeft, .barRight');
+
+        const handleHover = (year) => {
+            const currentRange = data.find(
+                (d) => year >= d.Start_year && year <= d.End_year
+            );
+
+            bars.style('opacity', (d) => {
+                const isInPeriod =
+                    currentRange &&
+                    d.year >= currentRange.Start_year &&
+                    d.year <= currentRange.End_year;
+                return isInPeriod || d.year === year ? 0 : 1;
+            });
+        };
+
+        bars.on('mouseover', (e, d) => handleHover(d.year)).on('mouseout', () =>
+            bars.style('opacity', 1)
+        );
     };
 </script>
 
