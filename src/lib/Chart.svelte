@@ -63,20 +63,6 @@
             .range([height, 0])
             .padding(-0.04);
 
-        // parties
-        const parties = Array.from(
-            new Set(
-                data.reduce(
-                    (allParties, d) =>
-                        allParties.concat(
-                            d.Parties_left.map((party) => party.Party),
-                            d.Parties_right.map((party) => party.Party)
-                        ),
-                    []
-                )
-            )
-        );
-
         // all data
         const expandedData = data.flatMap((d) => {
             const startYear = d.Start_year;
@@ -141,15 +127,6 @@
             .attr('height', yScale.bandwidth())
             .style('fill', (d) => {
                 const color = alternateColor(d.year, true);
-
-                // logging seats just to check
-                let cumulativeSeats = 0;
-                const partiesLeft = d.Parties_left.map((party) => {
-                    cumulativeSeats += party.Seats;
-                    // console.log('Left Bar - Year:', d.year, 'Party:', party.Party, 'Seats:', party.Seats);
-                    return { ...party, cumulativeSeats };
-                });
-
                 return color;
             });
         // prettier-ignore
@@ -164,15 +141,6 @@
             .attr('height', yScale.bandwidth())
             .style('fill', (d) => {
                 const color = alternateColor(d.year, false);
-
-                // logging seats just to check
-                let cumulativeSeats = 0;
-                const partiesRight = d.Parties_right.map((party) => {
-                    cumulativeSeats += party.Seats;
-                    // console.log('Right Bar - Year:', d.year, 'Party:', party.Party, 'Seats:', party.Seats);
-                    return { ...party, cumulativeSeats };
-                });
-
                 return color;
             });
 
