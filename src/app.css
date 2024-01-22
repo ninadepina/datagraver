@@ -33,8 +33,13 @@ body {
     overflow-x: hidden;
 }
 
-#chart-container svg {
+.chart_right svg {
     margin-top: 41.91rem;
     margin-left: 1rem;
     transform: rotate(90deg);
+}
+.chart_left svg {
+    margin-top: 41.4688rem;
+    margin-left: -12.45rem;
+    transform: rotate(-90deg);
 }

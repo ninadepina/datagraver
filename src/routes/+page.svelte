@@ -1,6 +1,7 @@
 <script>
     import Chart from '$lib/Chart.svelte';
     import RightStacked from '$lib/RightStacked.svelte';
+    import LeftStacked from '$lib/LeftStacked.svelte';
 </script>
 
 <h1>Tweede kamer door de jaren heen</h1>
@@ -11,8 +12,11 @@
 </h2>
 
 <div class="chart-container">
-    <div class="chart">
+    <div class="chart chart_right">
         <RightStacked />
+    </div>
+    <div class="chart chart_left">
+        <LeftStacked />
     </div>
     <div class="chart chart_main">
         <Chart />

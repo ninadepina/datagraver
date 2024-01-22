@@ -23,7 +23,7 @@
         const height = 275 - margin.top - margin.bottom;
 
         const svg = d3
-            .select('#chart-container')
+            .select('#chart-container-left')
             .append('svg')
             .attr('width', width + margin.left + margin.right)
             .attr('height', height + margin.top + margin.bottom)
@@ -45,14 +45,14 @@
                 })
             )
         );
-        years.reverse();
+        // years.reverse();
 
         const parties = Array.from(
             new Set(
                 data.reduce(
                     (allParties, d) =>
                         allParties.concat(
-                            d.Parties_right.map((party) => party.Party)
+                            d.Parties_left.map((party) => party.Party)
                         ),
                     []
                 )
@@ -83,7 +83,7 @@
 
         years.forEach((year) => {
             const stackedBars = svg
-                .selectAll(`.stacked-bar-group-${year}`)
+                .selectAll(`.stacked-bar-group-left-${year}`)
                 .data(
                     data.filter(
                         (d) => d.Start_year <= year && d.End_year >= year
@@ -91,14 +91,14 @@
                 )
                 .enter()
                 .append('g')
-                .attr('class', `stacked-bar-group-${year}`)
+                .attr('class', `stacked-bar-group-left-${year}`)
                 .attr('transform', (d) => `translate(${xScale(year)}, 0)`);
 
             stackedBars
                 .selectAll('rect')
                 .data((d) => {
                     let cumulativeSeats = 0;
-                    return d.Parties_right.map((party) => {
+                    return d.Parties_left.map((party) => {
                         const seats = party.Seats;
                         cumulativeSeats += seats;
                         return { ...party, seats, cumulativeSeats };
@@ -145,7 +145,7 @@
     };
 </script>
 
-<div id="chart-container" />
+<div id="chart-container-left" />
 <div id="tooltip" bind:this={tooltip} class="tooltip" />
 
 <style>
