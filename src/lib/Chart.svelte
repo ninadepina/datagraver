@@ -3,6 +3,7 @@
     import * as d3 from 'd3';
 
     let data;
+    let tooltip;
 
     onMount(async () => {
         try {
@@ -20,6 +21,7 @@
         const margin = { top: 20, right: 30, bottom: 30, left: 30 };
         const width = 500 - margin.left - margin.right;
         const height = 1600 - margin.top - margin.bottom;
+        const tooltipSelection = d3.select(tooltip);
 
         const svg = d3
             .select('#chart')
@@ -210,7 +212,7 @@
         // hover effect
         const bars = svg.selectAll('.barLeft, .barRight');
 
-        const handleHover = (year) => {
+        const handleHover = (e, year) => {
             const currentRange = data.find(
                 (d) => year >= d.Start_year && year <= d.End_year
             );
@@ -222,12 +224,61 @@
                     d.year <= currentRange.End_year;
                 return isInPeriod || d.year === year ? 0 : 1;
             });
+
+            if (currentRange) {
+                const xPos = e.pageX;
+                const yPos = e.pageY;
+
+                const partiesLeftList = currentRange.Parties_left.map(
+                    ({ Party, Seats }) => `${Party}: ${Seats}`
+                ).join('<br>');
+                const partiesRightList = currentRange.Parties_right.map(
+                    ({ Party, Seats }) => `${Party}: ${Seats}`
+                ).join('<br>');
+
+                tooltipSelection
+                    .style('opacity', 1)
+                    .html(
+                        `
+                            <div class="party-list">
+                                <strong>Links:</strong><br>${partiesLeftList}
+                            </div>
+                            <div class="party-list">
+                                <strong>Rechts:</strong><br>${partiesRightList}
+                            </div>
+                        `
+                    )
+                    .style('left', `${xPos}px`)
+                    .style('top', `${yPos}px`);
+            } else {
+                tooltipSelection.style('opacity', 0);
+            }
         };
 
-        bars.on('mouseover', (e, d) => handleHover(d.year)).on('mouseout', () =>
-            bars.style('opacity', 1)
+        bars.on('mouseover', (e, d) => handleHover(e, d.year)).on(
+            'mouseout',
+            () => {
+                bars.style('opacity', 1);
+                tooltipSelection.style('opacity', 0);
+            }
         );
     };
 </script>
 
 <div id="chart" />
+<div id="tooltip" bind:this={tooltip} class="tooltip" />
+
+<style>
+    .tooltip {
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 999;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+</style>
