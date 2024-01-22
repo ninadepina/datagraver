@@ -76,10 +76,89 @@
             .domain([0, d3.max(totalSeatsByYear)])
             .range([height, 0]);
 
+        // const colorScale = d3
+        //     .scaleOrdinal()
+        //     .domain(parties)
+        //     .range(d3.schemeSet3);
+
         const colorScale = d3
             .scaleOrdinal()
-            .domain(parties)
-            .range(d3.schemeSet3);
+            .domain([
+                'GL-PvdA',
+                'D66',
+                'SP',
+                'PvdD',
+                'DENK',
+                'Volt',
+                'BIJ1',
+                'GL',
+                'PvdA',
+                'PPR',
+                'PSP',
+                'CPN',
+                'EVP',
+                "DS'70",
+                'SDAP',
+                'VDB',
+                'CDU',
+                'CPH',
+                'RSP',
+                'RKVP',
+                'CPH-De Visser',
+                'CPH-Wijnkoop',
+                'Liberale Partij',
+                'Neutrale Partij',
+                'CSP',
+                'BCS',
+                'CDP',
+                'Middenstandspartij',
+                'SDP',
+                'EB',
+                'BVL',
+                'onafhankelijk c.h.',
+                'vrije socialist',
+                'vrije Liberalen',
+                'CH Kiezersbond',
+                'onafhankelijk a.r.'
+            ])
+            .range([
+                'brown', // GL-PvdA
+                '#38A93E', // D66
+                '#E61B23', // SP
+                '#1F682B', // PvdD
+                '#38B1AC', // DENK
+                '#5C278A', // Volt
+                '#F7F702', // BIJ1
+                '#38AA32', // GL
+                '#DE0B2D', // PvdA
+                '#2C429E', // PPR
+                '#F4212C', // PSP
+                'orange', // CPN
+                '#7B2C63', // EVP
+                '#E60C20', // DS'70
+                '#CA2714', // SDAP
+                '#B3B3B3', // VDB
+                'navy', // CDU
+                'maroon', // CPH
+                'salmon', // RSP
+                '#C63D1A', // RKVP
+                'lavender', // CPH-De Visser
+                'plum', // CPH-Wijnkoop
+                'turquoise', // Liberale Partij
+                'violet', // Neutrale Partij
+                'sienna', // CSP
+                'slategray', // BCS
+                'peru', // CDP
+                'darkgreen', // Middenstandspartij
+                'darkred', // SDP
+                'darkcyan', // EB
+                'darkslateblue', // BVL
+                'rosybrown', // onafhankelijk c.h.
+                'lightcoral', // vrije socialist
+                'mediumorchid', // vrije Liberalen
+                'darkorange', // CH Kiezersbond
+                'indianred' // onafhankelijk a.r.
+            ]);
 
         years.forEach((year) => {
             const stackedBars = svg

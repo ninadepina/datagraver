@@ -76,10 +76,108 @@
             .domain([0, d3.max(totalSeatsByYear)])
             .range([height, 0]);
 
+        // const colorScale = d3
+        //     .scaleOrdinal()
+        //     .domain(parties)
+        //     .range(d3.schemeSet3);
         const colorScale = d3
             .scaleOrdinal()
-            .domain(parties)
-            .range(d3.schemeSet3);
+            .domain([
+                'PVV',
+                'FvD',
+                'VVD',
+                'CDA',
+                'CU',
+                'SGP',
+                'NSC',
+                'BBB',
+                'JA21',
+                '50PLUS',
+                'LPF',
+                'Leefbaar',
+                'GPV',
+                'RPF',
+                'UNIE 55+',
+                'CD',
+                'AOV',
+                'CP',
+                'BP',
+                'RKPN',
+                'CHU',
+                'ARP',
+                'KVP',
+                'PSP',
+                'NMP',
+                'KNP',
+                'Lijst Welter',
+                'PvdV',
+                'LSP',
+                'NSB',
+                'RKSP',
+                'VNH',
+                'HGSP',
+                'NBTM',
+                'Vrijheidsbond',
+                'Plattelandersbond',
+                'MP S&L',
+                'RK',
+                'VDW',
+                'LU',
+                'AB',
+                'Bond van Vrije Liberalen',
+                'Friese Bond',
+                'CHP',
+                'VAR',
+                'katholieken'
+            ])
+            .range([
+                '#184673', // PVV
+                '#A5191B', // FvD
+                '#F66303', // VVD
+                '#44C94B', // CDA
+                '#30A5E8', // CU
+                '#EA5D05', // SGP
+                '#131239', // NSC
+                '#97C218', // BBB
+                '#E01A14', // JA21
+                '#932290', // 50PLUS
+                '#F9D846', // LPF
+                '#447937', // Leefbaar
+                '#F77608', // GPV
+                '#8CE1B8', // RPF
+                '#FCCE48', // UNIE 55+
+                '#F44A29', // CD
+                '#1C559F', // AOV
+                '#F1EC88', // CP
+                'maroon', // BP
+                '#DABD2D', // RKPN
+                '#393B8B', // CHU
+                '#9B2B93', // ARP
+                '#FDE24C', // KVP
+                '#F42630', // PSP
+                '#E1CAA0', // NMP
+                'darkslategray', // KNP
+                'firebrick', // Lijst Welter
+                'tomato', // PvdV
+                'gold', // LSP
+                'darkred', // NSB
+                'sienna', // RKSP
+                'darkkhaki', // VNH
+                'mediumvioletred', // HGSP
+                'darkcyan', // NBTM
+                'darkgreen', // Vrijheidsbond
+                'olivedrab', // Plattelandersbond
+                'lightseagreen', // MP S&L
+                'saddlebrown', // RK
+                'darkviolet', // VDW
+                'peru', // LU
+                'darkslategray', // AB
+                'gold', // Bond van Vrije Liberalen
+                'mediumspringgreen', // Friese Bond
+                'indianred', // CHP
+                'lightslategray', // VAR
+                'darkorange' // katholieken
+            ]);
 
         years.forEach((year) => {
             const stackedBars = svg
