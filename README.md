@@ -4,8 +4,6 @@
 
 'datagraver' is a web application built with SvelteKit and Node.js! It's a schoolproject that gives you an answet to: 'To what extent have historical events in the Netherlands influenced the voting behavior of the population during the Tweede Kamer elections over the years?'
 
-![banner](https://github.com/ninadepina/tech-track-23-24/assets/89778503/54649cb2-70e8-4c7a-afad-c13e2d7253c7)
-
 ---
 
 ## 👩🏼‍💻 How to use
