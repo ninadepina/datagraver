@@ -5,7 +5,7 @@
         </div>
         <div class="text">
             <p>
-                In het jaar van de Watersnoodramp (1953) waren er geen Tweede Kamerverkiezingen.
+                In het jaar van de Watersnoodramp waren er geen Tweede Kamerverkiezingen.
             </p>
         </div>
     </div>
