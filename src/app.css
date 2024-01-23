@@ -12,11 +12,15 @@
 :root {
     --font-family: 'Marcellus', serif;
     --font-family-h2: 'Inter', sans-serif;
+
+    --color: #131313;
+    --bg-color: #ededed;
 }
 
 body {
     font-family: var(--font-family-h2);
     font-size: 0.8rem;
+    color: #131313;
 }
 
 h1 {
@@ -77,4 +81,28 @@ body {
     height: 12px;
     background-color: var(--color);
     border-radius: 3px;
+}
+
+.title {
+    margin-bottom: 0.5rem;
+    margin-left: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+.title strong {
+    font-size: 0.85rem;
+    font-weight: 900;
+    white-space: nowrap;
+}
+.title p {
+    font-size: 0.85rem;
+    line-height: 0.8rem;
+}
+
+.text p {
+    font-size: 0.85rem;
+}
+
+img {
+    object-fit: contain;
 }

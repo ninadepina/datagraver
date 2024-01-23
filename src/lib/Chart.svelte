@@ -2,6 +2,16 @@
     import { onMount } from 'svelte';
     import * as d3 from 'd3';
 
+    import Corona from '$lib/comp_periods/Corona.svelte';
+    import Kredietcrisis from '$lib/comp_periods/Kredietcrisis.svelte';
+    import Fortuyn from '$lib/comp_periods/Fortuyn.svelte';
+    import Oliecrisis from '$lib/comp_periods/Oliecrisis.svelte';
+    import Watersnoodramp from '$lib/comp_periods/Watersnoodramp.svelte';
+    import WW2 from '$lib/comp_periods/WW2.svelte';
+    import Economie from '$lib/comp_periods/Economie.svelte';
+    import Na1918 from '$lib/comp_periods/Na1918.svelte';
+    import Voor1918 from '$lib/comp_periods/Voor1918.svelte';
+
     let data;
     let tooltip;
 
@@ -359,8 +369,46 @@
     };
 </script>
 
-<div id="chart" />
-<div id="tooltip" bind:this={tooltip} class="tooltip" />
+<section>
+    <div id="chart" />
+    <div id="tooltip" bind:this={tooltip} class="tooltip" />
+
+    <article id="article_one">
+        <Corona />
+    </article>
+
+    <article id="article_two">
+        <Kredietcrisis />
+    </article>
+
+    <article id="article_three">
+        <Fortuyn />
+    </article>
+
+    <article id="article_four">
+        <Oliecrisis />
+    </article>
+
+    <article id="article_five">
+        <Watersnoodramp />
+    </article>
+
+    <article id="article_six">
+        <WW2 />
+    </article>
+
+    <article id="article_seven">
+        <Economie />
+    </article>
+
+    <article id="article_eight">
+        <Na1918 />
+    </article>
+
+    <article id="article_nine">
+        <Voor1918 />
+    </article>
+</section>
 
 <style>
     .tooltip {
@@ -373,5 +421,50 @@
         border: 1px solid #ddd;
         pointer-events: none;
         z-index: 999;
+    }
+
+    section {
+        position: relative;
+    }
+
+    article {
+        position: absolute;
+        right: -23.4rem;
+    }
+
+    #article_one {
+        top: -1.5rem;
+    }
+
+    #article_two {
+        top: 8.5rem;
+    }
+
+    #article_three {
+        top: 18.4rem;
+    }
+
+    #article_four {
+        top: 36.3rem;
+    }
+
+    #article_five {
+        top: 46.4rem;
+    }
+
+    #article_six {
+        top: 55.4rem;
+    }
+
+    #article_seven {
+        top: 70rem;
+    }
+
+    #article_eight {
+        top: 79.7rem;
+    }
+
+    #article_nine {
+        top: 89.2rem;
     }
 </style>
