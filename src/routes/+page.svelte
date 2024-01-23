@@ -26,12 +26,10 @@
 <style>
     .chart-container {
         position: relative;
-        /* display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        margin-top: 2rem; */
+    }
+
+    .chart {
+        position: absolute;
     }
 
     .chart_main {
@@ -39,9 +37,5 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-    }
-
-    .chart {
-        position: absolute;
     }
 </style>

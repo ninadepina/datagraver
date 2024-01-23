@@ -364,14 +364,14 @@
 
 <style>
     .tooltip {
-        position: absolute;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        padding: 10px;
         opacity: 0;
-        pointer-events: none;
-        z-index: 999;
+        position: absolute;
         display: flex;
         gap: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        pointer-events: none;
+        z-index: 999;
     }
 </style>

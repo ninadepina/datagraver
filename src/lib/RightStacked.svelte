@@ -248,11 +248,11 @@
 
 <style>
     .tooltip {
+        opacity: 0;
         position: absolute;
+        padding: 10px;
         background-color: #fff;
         border: 1px solid #ddd;
-        padding: 10px;
-        opacity: 0;
         pointer-events: none;
         z-index: 999;
     }
