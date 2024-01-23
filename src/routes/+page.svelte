@@ -10,6 +10,9 @@
     het stemgedrag van de bevolking tijdens de Tweede Kamer verkiezingen door de
     jaren heen?
 </h2>
+<div class="banner">
+    <h3>Indeling politieke partijen - links/rechts</h3>
+</div>
 
 <div class="chart-container">
     <div class="chart chart_right">
@@ -24,9 +27,14 @@
 </div>
 
 <style>
+    .banner {
+        width: 100%;
+        margin: 1rem 0;
+        background-color: var(--bg-color);
+    }
+
     .chart-container {
         position: relative;
-        margin-top: 2rem;
     }
 
     .chart {
