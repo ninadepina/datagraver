@@ -34,11 +34,26 @@ h2 {
     text-align: center;
 }
 
-body { 
+body {
     overflow-x: hidden;
 }
 
+#chart-container,
+#chart-container-left {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.chart_right {
+    left: 5.75rem;
+}
+.chart_left {
+    left: -0.9rem;
+}
+
 .chart_right svg {
+    min-width: 1610px;
     margin-top: 41.91rem;
     margin-left: 1rem;
     transform: rotate(90deg);
@@ -48,6 +63,7 @@ body {
     margin-left: -12.45rem;
     transform: rotate(-90deg);
 }
+
 .party-item {
     position: relative;
     padding-left: 14px;
