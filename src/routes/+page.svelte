@@ -26,6 +26,7 @@
 <style>
     .chart-container {
         position: relative;
+        margin-top: 2rem;
     }
 
     .chart {

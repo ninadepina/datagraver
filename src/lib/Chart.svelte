@@ -313,21 +313,21 @@
             // bars.style('cursor', currentRange ? 'pointer' : 'default');
 
             if (currentRange) {
-                const xPos = e.pageX;
-                const yPos = e.pageY - 60;
+                const xPos = e.pageX - 440;
+                const yPos = e.pageY - 100;
 
                 const partiesLeftList = currentRange.Parties_left.map(
                     ({ Party, Seats }) =>
                         `<span style="--color: ${
                             colorScaleData[Party] || 'red'
-                        };" class="party-item">${Party}: ${Seats}</span>`
+                        }; white-space: nowrap;" class="party-item">${Party}: ${Seats}</span>`
                 ).join('<br>');
 
                 const partiesRightList = currentRange.Parties_right.map(
                     ({ Party, Seats }) =>
                         `<span style="--color: ${
                             colorScaleData[Party] || 'red'
-                        };" class="party-item">${Party}: ${Seats}</span>`
+                        }; white-space: nowrap;" class="party-item">${Party}: ${Seats}</span>`
                 ).join('<br>');
 
                 tooltipSelection
@@ -335,10 +335,10 @@
                     .html(
                         `
                             <div class="party-list">
-                                <strong>Links (${currentRange.Left}):</strong><br>${partiesLeftList}
+                                <strong style="white-space: nowrap;">Links (${currentRange.Left}):</strong><br>${partiesLeftList}
                             </div>
                             <div class="party-list">
-                                <strong>Rechts (${currentRange.Right}):</strong><br>${partiesRightList}
+                                <strong style="white-space: nowrap;">Rechts (${currentRange.Right}):</strong><br>${partiesRightList}
                             </div>
                         `
                     )
