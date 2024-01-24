@@ -41,10 +41,8 @@
     }
 
     .switch label {
-        --border-radius: 0.5rem;
-
         margin-right: -1px;
-        padding: 1rem 1rem 0.5rem 1rem;
+        padding: 1rem 1rem 0.75rem 1rem;
         font-size: 14px;
         line-height: 1;
         text-align: center;

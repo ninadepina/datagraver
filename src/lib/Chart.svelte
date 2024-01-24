@@ -503,7 +503,7 @@
     }
 
     #article_one {
-        top: -1.5rem;
+        top: -0.5rem;
     }
 
     #article_two {
