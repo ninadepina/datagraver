@@ -1,27 +1,35 @@
 <section>
     <div>
-        <div class="title">
-            <strong>2002</strong>
+        <div>
+            <div class="title">
+                <strong>2002</strong>
+            </div>
+            <div class="text">
+                <p>
+                    In mei 2002 werd na de moord op Pim Fortuyn overwogen de
+                    verkiezingen uit te stellen, maar na overleg met de familie
+                    Fortuyn en de leiding van de LPF werd besloten dat de
+                    verkiezingen doorgingen.
+                </p>
+            </div>
         </div>
-        <div class="text">
-            <p>
-                In mei 2002 werd na de moord op Pim Fortuyn overwogen de
-                verkiezingen uit te stellen, maar na overleg met de familie
-                Fortuyn en de leiding van de LPF werd besloten dat de
-                verkiezingen doorgingen.
-            </p>
-        </div>
+        <img src="fortuyn.png" alt="" />
     </div>
-    <img src="fortuyn.png" alt="" />
+    <div>
+        <p>
+            Pim Fortuyn betrad op stormachtige wijze de politiek en bedreef
+            politiek op onconventionele wijze. Bekend om zijn flamboyante en
+            controversiële stijl. Hij was fel tegenstander van het 'paarse
+            kabinet' en het 'poldermodel'.
+        </p>
+    </div>
 </section>
 
 <style>
     section {
         display: flex;
-        align-items: flex-end;
-        gap: 0.9rem;
-        padding: 0.25rem 0.75rem 0.75rem 0.75rem;
-        background-color: var(--bg-color);
+        flex-direction: column;
+        gap: 0.75rem;
     }
     section::before {
         content: '';
@@ -31,7 +39,21 @@
         width: 5rem;
         height: 5rem;
         background-color: var(--bg-color);
-        clip-path: polygon(0 0, 100% 50%, 100% 80%)
+        clip-path: polygon(0 0, 100% 50%, 100% 80%);
+    }
+
+    section > div:first-of-type {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.9rem;
+        padding: 0.25rem 0.75rem 0.75rem 0.75rem;
+        background-color: var(--bg-color);
+    }
+    section > div:last-of-type {
+        width: 398.39px;
+        padding: 0.75rem;
+        font-size: 0.85rem;
+        background-color: var(--bg-color);
     }
 
     .title {
