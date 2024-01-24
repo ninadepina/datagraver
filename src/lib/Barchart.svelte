@@ -107,10 +107,10 @@
                 }
             }
             // console.log(currentRangeIndex);
-            let baseColor = currentRangeIndex % 2 === 0 ? '#d60270' : '#d60270';
+            let baseColor = currentRangeIndex % 2 === 0 ? '#e0d7e8' : '#b4a1c2';
 
             return isLeft
-                ? (baseColor = currentRangeIndex % 2 === 0 ? '#0038a8' : '#0038a8')
+                ? (baseColor = currentRangeIndex % 2 === 0 ? '#d9e8d7' : '#a5c2a1')
                 : baseColor;
         };
 
