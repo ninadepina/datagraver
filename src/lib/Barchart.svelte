@@ -321,6 +321,10 @@
 </section>
 
 <style>
+    #chart {
+        min-width: 940px;
+    }
+
     .barMen,
     .barWomen {
         stroke: none;

@@ -469,6 +469,10 @@
 </section>
 
 <style>
+    #chart {
+        min-width: 500px;
+    }
+    
     .tooltip {
         opacity: 0;
         position: absolute;

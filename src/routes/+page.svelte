@@ -23,7 +23,16 @@
     jaren heen?
 </h2>
 <div class="banner">
-    <h3>Indeling Tweede Kamer - <span>links/rechts</span></h3>
+    <h3>
+        Indeling Tweede Kamer -
+        <span>
+            {#if activePage === 'man/vrouw'}
+                man/vrouw
+            {:else}
+                links/rechts
+            {/if}
+        </span>
+    </h3>
 </div>
 
 <div class="chart-container">
@@ -56,9 +65,6 @@
         margin: 1rem 0;
         background-color: var(--bg-color);
     }
-    .banner span {
-        width: 89.25px;
-    }
 
     .chart-container {
         position: relative;
@@ -83,7 +89,7 @@
     .tabs {
         position: fixed;
         top: 50%;
-        left: -4.6rem;
-        transform: rotate(-90deg) translateY(-50%);
+        left: -5.6rem;
+        transform: translateY(-50%) rotate(-90deg) ;
     }
 </style>
