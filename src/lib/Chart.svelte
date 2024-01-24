@@ -334,11 +334,11 @@
                 return isInPeriod || d.year === year ? 0 : 1;
             });
 
-            // bars.style('cursor', currentRange ? 'pointer' : 'default');
-
             if (currentRange) {
-                const xPos = e.pageX - 440;
-                const yPos = e.pageY - 100;
+                const xPos = e.pageX - 460;
+                const yPos = e.pageY - 160;
+
+                const totalSeats = currentRange.Left + currentRange.Right;
 
                 const partiesLeftList = currentRange.Parties_left.map(
                     ({ Party, Seats }) =>
@@ -357,12 +357,16 @@
                 tooltipSelection
                     .style('opacity', 1)
                     .html(
-                        `
-                            <div class="party-list">
-                                <strong style="white-space: nowrap;">Links (${currentRange.Left}):</strong><br>${partiesLeftList}
-                            </div>
-                            <div class="party-list">
-                                <strong style="white-space: nowrap;">Rechts (${currentRange.Right}):</strong><br>${partiesRightList}
+                        `   <div class="ttip">
+                                <p style="white-space: nowrap; margin-bottom: 0.25rem;"><strong>Totaal:</strong> ${totalSeats} zetels</p>
+                                <div style="display: flex; flex-direction: row; gap: 1rem;">
+                                    <div class="party-list">
+                                        <strong style="white-space: nowrap; margin-bottom: 0.2rem;">Links (${currentRange.Left}):</strong><br>${partiesLeftList}
+                                    </div>
+                                    <div class="party-list">
+                                        <strong style="white-space: nowrap; margin-bottom: 0.2rem;">Rechts (${currentRange.Right}):</strong><br>${partiesRightList}
+                                    </div>  
+                                </div>
                             </div>
                         `
                     )

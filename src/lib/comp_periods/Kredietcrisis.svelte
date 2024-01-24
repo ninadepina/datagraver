@@ -25,7 +25,7 @@
     img {
         position: absolute;
         left: -0.8rem;
-        bottom: -0.1rem;
+        bottom: -0.12rem;
         width: 245px;
     }
 
