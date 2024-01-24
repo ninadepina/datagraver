@@ -197,12 +197,17 @@
         let menBar;
         let womenBar;
 
-        bars.on('mouseover', (event, d) => {
+        bars.on('mouseover', (e, d) => {
             const percentage = calculatePercentage(d);
-            const xPos = event.pageX - 225;
-            const yPos = event.pageY - 175;
+            const xPos = e.pageX - 225;
+            let yPos = e.pageY - 175;
 
-            const classes = event.currentTarget.classList[1];
+            const tooltipHeight = tooltipSelection.node().offsetHeight;
+            if (yPos + tooltipHeight > 1550) {
+                yPos = e.pageY - 300;
+            }
+
+            const classes = e.currentTarget.classList[1];
             const parts = classes.split('-');
 
             const yearBars = svg.selectAll(
@@ -453,7 +458,7 @@
     }
 
     #span_two {
-        top: 33rem;
+        top: 33.1rem;
         left: 3.15rem;
     }
 
@@ -464,11 +469,11 @@
 
     #span_four {
         top: 46.5rem;
-        left: -1.8rem;
+        left: -1.65rem;
     }
 
     #span_five {
-        top: 56.45rem;
+        top: 56.3rem;
         left: -0.75rem;
     }
 

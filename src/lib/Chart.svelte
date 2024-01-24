@@ -336,7 +336,12 @@
 
             if (currentRange) {
                 const xPos = e.pageX - 460;
-                const yPos = e.pageY - 160;
+                let yPos = e.pageY - 160;
+
+                const tooltipHeight = tooltipSelection.node().offsetHeight;
+                if (yPos + tooltipHeight > 1550) {
+                    yPos = e.pageY - 380;
+                }
 
                 const totalSeats = currentRange.Left + currentRange.Right;
 
@@ -476,7 +481,7 @@
     #chart {
         min-width: 500px;
     }
-    
+
     .tooltip {
         opacity: 0;
         position: absolute;
@@ -577,7 +582,7 @@
 
     #span_six {
         top: 46.1rem;
-        left: -8.6rem;
+        left: -8.5rem;
     }
 
     #span_seven {
