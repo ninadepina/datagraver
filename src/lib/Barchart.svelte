@@ -200,7 +200,6 @@
 
             const classes = event.currentTarget.classList[1];
             const parts = classes.split('-');
-            console.log(parts[1]);
 
             const yearBars = svg.selectAll(`.men-${parts[1]}, .women-${parts[1]}`);
 

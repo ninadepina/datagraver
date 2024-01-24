@@ -24,6 +24,7 @@
     .switch {
         position: relative;
         display: flex;
+        gap: 1px;
         padding-right: 1px;
         overflow: hidden;
         cursor: pointer;

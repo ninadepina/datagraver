@@ -4,7 +4,6 @@
     import Chart from '$lib/Chart.svelte';
     import RightStacked from '$lib/RightStacked.svelte';
     import LeftStacked from '$lib/LeftStacked.svelte';
-
     import Barchart from '$lib/Barchart.svelte';
 
     import Tabs from '$lib/Tabs.svelte';
