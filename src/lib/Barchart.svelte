@@ -195,8 +195,8 @@
 
         bars.on('mouseover', (event, d) => {
             const percentage = calculatePercentage(d);
-            const xPos = event.pageX;
-            const yPos = event.pageY;
+            const xPos = event.pageX - 225;
+            const yPos = event.pageY - 175;
 
             bars.style('opacity', 0.4);
             d3.select(event.currentTarget).style('opacity', 1);
