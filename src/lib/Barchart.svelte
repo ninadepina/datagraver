@@ -106,11 +106,11 @@
                     break;
                 }
             }
-            // console.log(currentRangeIndex);
-            let baseColor = currentRangeIndex % 2 === 0 ? '#e0d7e8' : '#b4a1c2';
+
+            let baseColor = currentRangeIndex % 2 === 0 ? '#d6cae0' : '#b4a1c2';
 
             return isLeft
-                ? (baseColor = currentRangeIndex % 2 === 0 ? '#d9e8d7' : '#a5c2a1')
+                ? (baseColor = currentRangeIndex % 2 === 0 ? '#cadec8' : '#a5c2a1')
                 : baseColor;
         };
 
@@ -119,7 +119,7 @@
             .data(years)
             .enter()
             .append('rect')
-            .attr('class', (year) => `barMen men-${year}`)
+            .attr('class', (year, d) => `barMen men-${year} ${d}`)
             .attr('y', (year, index) => yScale(index) + 9)
             .attr('height', height / years.length)
             .attr('x', (year) => {
@@ -193,6 +193,10 @@
         // tooltip
         const bars = svg.selectAll('.barMen, .barWomen');
 
+        let color;
+        let menBar;
+        let womenBar;
+
         bars.on('mouseover', (event, d) => {
             const percentage = calculatePercentage(d);
             const xPos = event.pageX - 225;
@@ -201,7 +205,16 @@
             const classes = event.currentTarget.classList[1];
             const parts = classes.split('-');
 
-            const yearBars = svg.selectAll(`.men-${parts[1]}, .women-${parts[1]}`);
+            const yearBars = svg.selectAll(
+                `.men-${parts[1]}, .women-${parts[1]}`
+            );
+
+            color = alternateColor(`${parts[1]}`, true);
+
+            menBar = svg.select(`.men-${parts[1]}`);
+            menBar.style('fill', '#a5c2a1');
+            womenBar = svg.select(`.women-${parts[1]}`);
+            womenBar.style('fill', '#b4a1c2');
 
             bars.style('opacity', 0.4);
             yearBars.style('opacity', 1);
@@ -214,6 +227,10 @@
         });
 
         bars.on('mouseout', () => {
+            if (color === '#cadec8') {
+                menBar.style('fill', '#cadec8');
+                womenBar.style('fill', '#d6cae0');
+            }
             bars.style('opacity', 1);
             tooltipSelection.style('opacity', 0);
         });
