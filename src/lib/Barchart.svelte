@@ -229,6 +229,26 @@
             })
             .style('text-anchor', 'middle')
             .style('font-size', '0.625rem');
+
+        svg.selectAll('.vertical-line')
+            .data(allYears)
+            .enter()
+            .append('line')
+            .attr('class', 'vertical-line')
+            .attr('x1', width / 2)
+            .attr('x2', width / 2)
+            .attr('y1', (year, index) => yScale(index) + 9)
+            .attr(
+                'y2',
+                (year, index) => yScale(index) + height / years.length + 9
+            )
+            .style('stroke', '#000')
+            .style('opacity', (year) => {
+                const isStartYear = yearData.some((d) => d.Start_year === year);
+                const isEndYear = yearData.some((d) => d.End_year === year);
+
+                return isStartYear || isEndYear ? 0 : 1;
+            });
     };
     // prettier-ignore
     const calculatePercentage = (year) => {
