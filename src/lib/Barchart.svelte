@@ -119,7 +119,7 @@
             .data(years)
             .enter()
             .append('rect')
-            .attr('class', 'barMen')
+            .attr('class', (year) => `barMen men-${year}`)
             .attr('y', (year, index) => yScale(index) + 9)
             .attr('height', height / years.length)
             .attr('x', (year) => {
@@ -144,7 +144,7 @@
             .data(years)
             .enter()
             .append('rect')
-            .attr('class', 'barWomen')
+            .attr('class', (year) => `barWomen women-${year}`)
             .attr('y', (year, index) => yScale(index) + 9)
             .attr('height', height / years.length)
             .attr('x', width / 2)
@@ -198,8 +198,14 @@
             const xPos = event.pageX - 225;
             const yPos = event.pageY - 175;
 
+            const classes = event.currentTarget.classList[1];
+            const parts = classes.split('-');
+            console.log(parts[1]);
+
+            const yearBars = svg.selectAll(`.men-${parts[1]}, .women-${parts[1]}`);
+
             bars.style('opacity', 0.4);
-            d3.select(event.currentTarget).style('opacity', 1);
+            yearBars.style('opacity', 1);
 
             tooltipSelection
                 .style('opacity', 1)
