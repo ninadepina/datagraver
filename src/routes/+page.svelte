@@ -1,7 +1,19 @@
 <script>
+    import { onMount } from 'svelte';
+
     import Chart from '$lib/Chart.svelte';
     import RightStacked from '$lib/RightStacked.svelte';
     import LeftStacked from '$lib/LeftStacked.svelte';
+
+    import Barchart from '$lib/Barchart.svelte';
+
+    import Tabs from '$lib/Tabs.svelte';
+
+    let activePage = 'links-rechts';
+
+    onMount(() => {
+        document.querySelector('input[name="rtoggle"]').checked = true;
+    });
 </script>
 
 <h1>Tweede kamer door de jaren heen</h1>
@@ -11,18 +23,30 @@
     jaren heen?
 </h2>
 <div class="banner">
-    <h3>Indeling politieke partijen - links/rechts</h3>
+    <h3>Indeling Tweede Kamer - <span>links/rechts</span></h3>
 </div>
 
 <div class="chart-container">
-    <div class="chart chart_right">
-        <RightStacked />
-    </div>
-    <div class="chart chart_left">
-        <LeftStacked />
-    </div>
-    <div class="chart chart_main">
-        <Chart />
+    {#if activePage === 'man/vrouw'}
+        <div class="chart chart_2nd">
+            <Barchart />
+        </div>
+    {:else}
+        <div class="chart_1st">
+            <div class="chart chart_right">
+                <RightStacked />
+            </div>
+            <div class="chart chart_left">
+                <LeftStacked />
+            </div>
+            <div class="chart chart_main">
+                <Chart />
+            </div>
+        </div>
+    {/if}
+
+    <div class="tabs">
+        <Tabs bind:activePage />
     </div>
 </div>
 
@@ -31,6 +55,9 @@
         width: 100%;
         margin: 1rem 0;
         background-color: var(--bg-color);
+    }
+    .banner span {
+        width: 89.25px;
     }
 
     .chart-container {
@@ -41,10 +68,22 @@
         position: absolute;
     }
 
-    .chart_main {
+    .chart_main,
+    .chart_2nd {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
+    }
+
+    .chart_2nd {
+        margin-left: -0.6rem;
+    }
+
+    .tabs {
+        position: fixed;
+        top: 50%;
+        left: -4.6rem;
+        transform: rotate(-90deg) translateY(-50%);
     }
 </style>

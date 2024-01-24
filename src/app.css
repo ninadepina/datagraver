@@ -34,6 +34,7 @@ h1 {
 h2 {
     max-width: 47rem;
     margin: 0 auto;
+    margin-bottom: 2rem;
     font-family: var(--font-family-h2);
     font-size: 1.1rem;
     font-weight: 400;
@@ -122,4 +123,20 @@ img {
 
 .svg_line circle {
     fill: var(--color);
+}
+
+.name {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.2rem;
+}
+.name p {
+    font-size: 0.65rem;
+}
+.name svg {
+    fill: none;
+}
+.name path {
+    stroke: var(--color);
+    stroke-width: 0.5;
 }
