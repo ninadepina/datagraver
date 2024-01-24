@@ -42,8 +42,11 @@
 <h1>Tweede kamer door de jaren heen</h1>
 <h2>
     In hoeverre hebben historische gebeurtenissen in Nederland invloed gehad op
-    het stemgedrag van de bevolking tijdens de Tweede Kamer verkiezingen door de
-    jaren heen?
+    het stem-
+    <span>
+        gedrag van de bevolking tijdens de Tweede Kamer verkiezingen door de
+        jaren heen?
+    </span>
 </h2>
 
 <div class="banner">
@@ -100,6 +103,10 @@
 </div>
 
 <style>
+    h2 span {
+        word-spacing: 0.2rem;
+    }
+
     .banner {
         position: sticky;
         top: 0;
