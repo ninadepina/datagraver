@@ -260,10 +260,19 @@
     };
     // prettier-ignore
     const calculatePercentage = (year) => {
-        const menPercentage = (data[year].men / (data[year].men + data[year].women)) * 100;
-        const womenPercentage = (data[year].women / (data[year].men + data[year].women)) * 100;
+        const totalPopulation = data[year].men + data[year].women + data[year].non_binary;
 
-        return `Men: ${menPercentage.toFixed(2)}%, Women: ${womenPercentage.toFixed(2)}`;
+        const menPercentage = (data[year].men / totalPopulation) * 100;
+        const womenPercentage = (data[year].women / totalPopulation) * 100;
+        const nonBinaryPercentage = (data[year].non_binary / totalPopulation) * 100;
+
+        let result = `Men: ${menPercentage.toFixed(2)}%, Women: ${womenPercentage.toFixed(2)}`;
+    
+        if (nonBinaryPercentage > 0) {
+            result += `%, Non-Binary: ${nonBinaryPercentage.toFixed(2)}`;
+        }
+
+        return result;
     };
 </script>
 
