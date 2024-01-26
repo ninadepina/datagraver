@@ -170,5 +170,6 @@
         top: 50%;
         left: -5.5rem;
         transform: translateY(-50%) rotate(-90deg);
+        z-index: 999;
     }
 </style>
