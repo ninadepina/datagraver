@@ -10,10 +10,12 @@
 
     onMount(async () => {
         try {
-            const res = await fetch('/geslachtPerJaar.json');
-            const jsonData = await res.json();
+            const [res1, res2] = await Promise.all([
+                fetch('/geslachtPerJaar.json'),
+                fetch('/linksrechts.json')
+            ]);
 
-            const res2 = await fetch('/linksrechts.json');
+            const jsonData = await res1.json();
             const jsonData2 = await res2.json();
 
             data = jsonData;
