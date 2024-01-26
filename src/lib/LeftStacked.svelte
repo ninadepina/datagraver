@@ -45,7 +45,6 @@
                 })
             )
         );
-        // years.reverse();
 
         const parties = Array.from(
             new Set(
@@ -75,11 +74,6 @@
             .scaleLinear()
             .domain([0, d3.max(totalSeatsByYear)])
             .range([height, 0]);
-
-        // const colorScale = d3
-        //     .scaleOrdinal()
-        //     .domain(parties)
-        //     .range(d3.schemeSet3);
 
         const colorScale = d3
             .scaleOrdinal()
