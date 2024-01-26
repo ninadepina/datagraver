@@ -335,12 +335,12 @@
             });
 
             if (currentRange) {
-                const xPos = e.pageX - 460;
-                let yPos = e.pageY - 160;
+                const xPos = e.offsetX + 20;
+                let yPos = e.offsetY + 20;
 
                 const tooltipHeight = tooltipSelection.node().offsetHeight;
                 if (yPos + tooltipHeight > 1550) {
-                    yPos = e.pageY - 380;
+                    yPos = e.offsetY - 140;
                 }
 
                 const totalSeats = currentRange.Left + currentRange.Right;
@@ -375,6 +375,7 @@
                             </div>
                         `
                     )
+                    .style('position', `absolute`)
                     .style('left', `${xPos}px`)
                     .style('top', `${yPos}px`);
             } else {
