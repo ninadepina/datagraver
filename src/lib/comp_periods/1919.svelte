@@ -5,10 +5,10 @@
         </div>
         <div class="text">
             <p>
-                In 1919 nam de Eerste Kamer het initiatiefwetsvoorstel-Marchant
-                over het vrouwenkiesrecht aan. Daardoor kregen vrouwen het recht
-                om te stemmen voor Tweede Kamer, Provinciale Staten en
-                gemeenteraden (beter bekend als het <span>actief</span> kiesrecht).
+                In 1919 werd het initiatiefwetsvoorstel-Marchant betreffende
+                vrouwenkiesrecht aangenomen door de Eerste Kamer. Hierdoor
+                verkregen vrouwen het recht om te stemmen bij verkiezingen voor
+                de Tweede Kamer, Provinciale Staten en gemeenteraden (<span>actief</span> kiesrecht).
             </p>
         </div>
     </div>

@@ -5,10 +5,10 @@
         </div>
         <div class="text">
             <p>
-                De Tweede Kamer wordt sinds de verkiezingen van 1918
-                samengesteld op basis van evenredige vertegenwoordiging
-                (kiesstelsel waarbij vrijwel alle uitgebrachte stemmen meetellen
-                voor de uiteindelijke verhoudingen in de zetelverdeling).
+                Sinds de verkiezingen van 1918 wordt de samenstelling van de
+                Tweede Kamer bepaald door evenredige vertegenwoordiging, een
+                kiesstelsel waarbij vrijwel alle uitgebrachte stemmen meewegen
+                bij de uiteindelijke verdeling van zetels.
             </p>
         </div>
     </div>
@@ -27,7 +27,7 @@
         width: 6rem;
         height: 1.6rem;
         background-color: var(--bg-color);
-        clip-path: polygon(0 100%, 100% 70%, 100% 0)
+        clip-path: polygon(0 100%, 100% 70%, 100% 0);
     }
 
     .title {

@@ -5,10 +5,15 @@
         </div>
         <div class="text">
             <p>
-                De Tweede Kamer bleef officieel bestaan, maar de Kamerleden konden en wilden niet vergaderen terwijl Nederland bezet was.
+                Hoewel de Tweede Kamer formeel intact bleef, weigerden en waren
+                de Kamerleden niet in staat om te vergaderen tijdens de
+                bezetting van Nederland.
             </p>
             <p>
-                Vanaf 1941 waren alle politieke partijen verboden, behalve de Nationaal-Socialistische Beweging (NSB): die was tegen de democratie en vóór de Duitsers.
+                Vanaf 1941 werden alle politieke partijen verboden, met
+                uitzondering van de Nationaal-Socialistische Beweging (NSB).
+                Deze partij was anti-democratisch en stond achter de Duitse
+                bezetting.
             </p>
         </div>
     </div>

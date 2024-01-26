@@ -6,10 +6,10 @@
             </div>
             <div class="text">
                 <p>
-                    In mei 2002 werd na de moord op Pim Fortuyn overwogen de
-                    verkiezingen uit te stellen, maar na overleg met de familie
-                    Fortuyn en de leiding van de LPF werd besloten dat de
-                    verkiezingen doorgingen.
+                    Na de moord op Pim Fortuyn in mei 2002 werd overwogen de
+                    verkiezingen uit te stellen. Na overleg met de familie
+                    Fortuyn en de LPF werd echter besloten dat de verkiezingen
+                    toch zouden plaatsvinden.
                 </p>
             </div>
         </div>

@@ -5,10 +5,11 @@
         </div>
         <div class="text">
             <p>
-                Voor de verkiezingen van 1918 (vanaf de Grondwetsherziening van
-                1848) werd er gebruik gemaakt van een meerderheidsstelsel
-                (districtenstelsel), waarbij degene die in een district de
-                absolute meerderheid had, was gekozen.
+                Tot aan de verkiezingen van 1918, die plaatsvonden na de
+                Grondwetsherziening van 1848, werd een meerderheidsstelsel
+                (districtenstelsel) toegepast. In dit systeem werd de kandidaat
+                die in een bepaald district de absolute meerderheid behaalde,
+                verkozen.
             </p>
         </div>
     </div>
@@ -27,7 +28,7 @@
         width: 6rem;
         height: 18rem;
         background-color: var(--bg-color);
-        clip-path: polygon(0 0, 100% 34%, 100% 25%)
+        clip-path: polygon(0 0, 100% 34%, 100% 25%);
     }
 
     .title {

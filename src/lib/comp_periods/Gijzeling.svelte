@@ -5,10 +5,11 @@
         </div>
         <div class="text">
             <p>
-                Toen er kort voor de verkiezingen van mei 1977 gijzelingen
-                plaatsvonden in een trein en een school besloten partijen de
-                verkiezingscampagnes stil te leggen. De verkiezingen gingen
-                echter door en kenden zelfs een enorm hoge opkomst.
+                Vlak voor de verkiezingen van mei 1977 werden een trein en een
+                school gegijzeld, wat leidde tot het besluit van de partijen om
+                de verkiezingscampagnes tijdelijk stop te zetten. Ondanks deze
+                gebeurtenissen gingen de verkiezingen toch door en kenmerkten
+                zich zelfs door een opvallend hoge opkomst.
             </p>
         </div>
     </div>

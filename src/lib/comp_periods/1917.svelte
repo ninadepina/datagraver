@@ -5,15 +5,16 @@
         </div>
         <div class="text">
             <p>
-                Steeds meer partijen gingen vanaf het begin van de twintigste
-                eeuw aandringen op invoering van algemeen kiesrecht. De
-                christelijke partijen wezen vrouwenkiesrecht echter af, omdat
-                dit strijdig werd geacht met 'de roeping' van de vrouw.
+                Vanaf het begin van de twintigste eeuw begonnen steeds meer
+                partijen te pleiten voor de invoering van algemeen kiesrecht.
+                Echter wezen de christelijke partijen het vrouwenkiesrecht af,
+                omdat het als strijdig werd beschouwd met 'de roeping' van de
+                vrouw.
             </p>
 
             <p>
-                In 1917 werd het <span>passief</span> (recht om gekozen te worden) kiesrecht
-                voor vrouwen vastgelegd in een Grondwetsherziening.
+                In 1917 werd het <span>passief</span> kiesrecht (recht om gekozen
+                te worden) voor vrouwen vastgelegd in een Grondwetsherziening.
             </p>
         </div>
     </div>

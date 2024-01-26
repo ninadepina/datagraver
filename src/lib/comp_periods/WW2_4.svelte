@@ -5,7 +5,9 @@
         </div>
         <div class="text">
             <p>
-                De Tweede Kamer bleef officieel bestaan, maar de Kamerleden konden en wilden niet vergaderen terwijl Nederland bezet was.
+                Hoewel de Tweede Kamer formeel intact bleef, weigerden en waren
+                de Kamerleden niet in staat om te vergaderen tijdens de
+                bezetting van Nederland.
             </p>
         </div>
     </div>
