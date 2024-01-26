@@ -74,6 +74,7 @@ label {
     transform: rotate(90deg);
 }
 .chart_left svg {
+    min-width: 1610px;
     margin-top: 41.4688rem;
     margin-left: -12.45rem;
     transform: rotate(-90deg);
