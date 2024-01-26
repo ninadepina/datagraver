@@ -339,7 +339,7 @@
                 let yPos = e.offsetY + 20;
 
                 const tooltipHeight = tooltipSelection.node().offsetHeight;
-                if (yPos + tooltipHeight > 1550) {
+                if (window.innerHeight - (e.clientY + tooltipHeight) < 100) {
                     yPos = e.offsetY - 140;
                 }
 
