@@ -199,12 +199,12 @@
 
         bars.on('mouseover', (e, d) => {
             const percentage = calculatePercentage(d);
-            const xPos = e.pageX - 225;
-            let yPos = e.pageY - 175;
+            const xPos = e.offsetX + 20;
+            let yPos = e.offsetY + 20;
 
             const tooltipHeight = tooltipSelection.node().offsetHeight;
             if (yPos + tooltipHeight > 1550) {
-                yPos = e.pageY - 300;
+                yPos = e.offsetY - 70;
             }
 
             const classes = e.currentTarget.classList[1];
