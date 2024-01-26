@@ -266,10 +266,10 @@
         const womenPercentage = (data[year].women / totalPopulation) * 100;
         const nonBinaryPercentage = (data[year].non_binary / totalPopulation) * 100;
 
-        let result = `Men: ${menPercentage.toFixed(2)}%, Women: ${womenPercentage.toFixed(2)}`;
+        let result = `Man: ${menPercentage.toFixed(2)}%, Vrouw: ${womenPercentage.toFixed(2)}`;
     
         if (nonBinaryPercentage > 0) {
-            result += `%, Non-Binary: ${nonBinaryPercentage.toFixed(2)}`;
+            result += `%, Non-binair: ${nonBinaryPercentage.toFixed(2)}`;
         }
 
         return result;
