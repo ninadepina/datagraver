@@ -49,6 +49,10 @@ h3 {
     text-align: center;
 }
 
+label {
+    cursor: pointer;
+}
+
 #chart-container,
 #chart-container-left {
     width: 100vw;
