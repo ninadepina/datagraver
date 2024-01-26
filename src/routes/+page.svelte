@@ -12,28 +12,28 @@
     let activePage = 'links-rechts';
     let text;
 
+    const handleScroll = () => {
+        const scrollY = window.scrollY || window.pageYOffset;
+        let opacity;
+
+        switch (true) {
+            case scrollY >= 150 && scrollY <= 185:
+                opacity = 1 - (scrollY - 150) / 50;
+                break;
+            case scrollY > 185:
+                opacity = 0;
+                break;
+            default:
+                opacity = 1;
+        }
+
+        if (!text.style) return;
+        text.style.opacity = opacity.toString();
+    };
+
     onMount(() => {
         document.querySelector('input[name="rtoggle"]').checked = true;
         handleScroll();
-
-        function handleScroll() {
-            const scrollY = window.scrollY || window.pageYOffset;
-            let opacity;
-
-            switch (true) {
-                case scrollY >= 150 && scrollY <= 185:
-                    opacity = 1 - (scrollY - 150) / 50;
-                    break;
-                case scrollY > 185:
-                    opacity = 0;
-                    break;
-                default:
-                    opacity = 1;
-            }
-
-            if (!text.style) return;
-            text.style.opacity = opacity.toString();
-        }
 
         window.addEventListener('scroll', handleScroll);
     });
