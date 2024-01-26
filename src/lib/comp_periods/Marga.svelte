@@ -3,7 +3,7 @@
         <strong>1956</strong>
         <p>Eerste vrouwelijke minister</p>
     </div>
-    <img src="marga.png" alt="" />
+    <img src="marga.png" alt="Marga Klompé" />
 
     <div class="name">
         <p>Marga Klompé</p>

@@ -3,7 +3,7 @@
         <strong>2023</strong>
         <p>Eerste non-binaire Tweede Kamer lid</p>
     </div>
-    <img src="kostic.png" alt="" />
+    <img src="kostic.png" alt="Ines Kostić" />
 
     <div class="name">
         <p>Ines Kostić</p>

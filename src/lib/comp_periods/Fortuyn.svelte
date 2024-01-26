@@ -13,7 +13,7 @@
                 </p>
             </div>
         </div>
-        <img src="fortuyn.png" alt="" />
+        <img src="fortuyn.png" alt="Pim Fortuyn die het volk groet" />
     </div>
     <div>
         <p>

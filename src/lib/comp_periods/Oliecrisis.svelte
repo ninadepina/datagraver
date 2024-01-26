@@ -3,7 +3,7 @@
         <strong>1973 - 1974</strong>
         <p>Oliecrisis</p>
     </div>
-    <img src="oliecrisis.png" alt="" />
+    <img src="oliecrisis.png" alt="Vier fietsende jongens over een autoweg" />
 </section>
 
 <style>

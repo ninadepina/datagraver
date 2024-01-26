@@ -3,7 +3,7 @@
         <strong>1998</strong>
         <p>Eerste vrouwelijke Tweede Kamer voorzitter</p>
     </div>
-    <img src="jeltje.png" alt="" />
+    <img src="jeltje.png" alt="Jeltje van Nieuwenhoven" />
 
     <div class="name">
         <p>Jeltje van Nieuwenhoven</p>

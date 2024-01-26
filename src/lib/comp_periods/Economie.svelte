@@ -3,7 +3,10 @@
         <strong>1929 - 1939</strong>
         <p>Economische crisis</p>
     </div>
-        <img src="economischecrisis.png" alt="" />
+    <img
+        src="economischecrisis.png"
+        alt="Twee gasten lopen met een bord van de Lehman Brothers na hun faillisement"
+    />
 </section>
 
 <style>

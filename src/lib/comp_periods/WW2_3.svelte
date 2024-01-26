@@ -3,7 +3,7 @@
         <strong>1940 - 1945</strong>
         <p>Tweede Wereldoorlog</p>
     </div>
-    <img src="ww2_copy.png" alt="" />
+    <img src="ww2_copy.png" alt="Twee soldaten met geweren" />
 </section>
 
 <style>

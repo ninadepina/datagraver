@@ -4,8 +4,14 @@
         <p>Coronacrisis</p>
     </div>
     <div class="img">
-        <img src="corona.png" alt="" />
-        <img src="corona2.png" alt="" />
+        <img
+            src="corona.png"
+            alt="vrouw in virusbeschermende kleding met mondkapje en handschoenen"
+        />
+        <img
+            src="corona2.png"
+            alt="vrouw neemt coronatest af bij man die zijn hoofd uit het autoraam heeft gestoken"
+        />
     </div>
 </section>
 

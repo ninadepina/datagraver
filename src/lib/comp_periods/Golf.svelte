@@ -3,7 +3,10 @@
         <strong>1965 - 1985</strong>
         <p>Tweede feministische golf</p>
     </div>
-    <img src="golf.png" alt="" />
+    <img
+        src="golf.png"
+        alt="Vrouwen met de tekst; 'baas in eigen buik' op hun buik"
+    />
 </section>
 
 <style>

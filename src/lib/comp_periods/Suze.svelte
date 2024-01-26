@@ -3,7 +3,7 @@
         <strong>1918</strong>
         <p>Eerste vrouwelijk Tweede Kamer lid</p>
     </div>
-    <img src="suze.png" alt="" />
+    <img src="suze.png" alt="Suze Groeneweg" />
 
     <div class="name">
         <p>Suze Groeneweg</p>
